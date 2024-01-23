@@ -35,13 +35,12 @@
       padding-top: 80px;
       display: flex;
       width: 100%;
-      padding-bottom: 50px;
+      padding-bottom: 80px;
     }
     .hero-image__text-wrapper {
       display: flex;
       flex-direction: column;
       width: 100%;
-      /* justify-content: space-between; */
       align-items: center;
     }
 
@@ -114,8 +113,220 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      min-height: 900px;
+      padding: 0 10px;
+      margin-top: -65px;
+    }
+
+    .scientist-section__wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 100px;
+    }
+
+    .scientist-section__header {
+      font-size: 34px;
+      color: #fff;
+      text-align: center;
+      font-family: Montserrat;
+    }
+
+    .scientist-section__table-wrapper {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .scientist-section__headers {
+      font-size: 30px;
+      color: #fff;
+      font-family: Montserrat;
+      padding: 20px 80px;
+    }
+
+    .scientist-section__paragraphs {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.4;
+      font-family: Montserrat;
+      margin-top: 70px;
+      background-color: #fff;
+      padding: 40px 80px;
+      position: relative;
+    }
+
+    .scientist-section__paragraphs::after {
+      content: "";
+      height: 50%;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(239, 239, 239, 0) 25%,
+        rgba(239, 239, 239, 0.75) 50%,
+        #efefef 100%
+      );
+    }
+
+    .container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-right: 5px;
+    }
+
+    th,
+    td {
+      border: 1px solid #000;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: red;
+    }
+
+    .table-gap {
+      margin-top: 5px;
+    }
+
+    .scientist-section__images-wrapper {
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 100px;
+    }
+
+    .scientist-section__image {
+      z-index: 100;
+      margin-top: -146px;
+      position: relative;
+      max-height: 514px;
+      margin-left: 35px;
+    }
+
+    .scientist-section__blackboard {
+      margin-top: -160px;
+      position: relative;
+      width: 131%;
+      z-index: 200;
+      margin-left: -161px;
+    }
+
+    .scientist-section__blackboard-text {
+      position: absolute;
+      top: 10%;
+      left: 14%;
+      z-index: 300;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .scientist-section__blackboard-header {
+      color: #fff;
+      font-size: 40px;
+      font-family: Montserrat;
+    }
+    .scientist-section__blackboard-second-header {
+      font-size: 20px;
+      color: #fff;
+      font-family: Montserrat;
+    }
+
+    .scientist-section__blackboard-input {
+      padding: 13px;
+      text-align: center;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    .scientist-section__blackboard-button {
+      padding: 13px;
+      background-color: #ff0000;
+      font-weight: 600;
+      font-family: Montserrat;
+      color: #fff;
+      border: none;
+      text-decoration: none;
+      cursor: pointer;
+      margin: 0 45px;
+      margin-top: 10px;
+    }
+    .seo-section__wrapper {
+      background-image: url(assets/SEO/Grey-bg.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
       min-height: 600px;
       padding: 0 10px;
+      margin-top: -73px;
+    }
+
+    .seo-section__image-paragraph {
+      margin: 0 auto;
+      max-width: 1200px;
+      display: flex;
+      padding-top: 85px;
+      padding-bottom: 50px;
+    }
+
+    .seo-section__paragraphs-wrapper {
+      margin-left: 35px;
+      margin-top: 80px;
+    }
+
+    .seo-section__paragraph {
+      font-family: Montserrat;
+      font-size: 16px;
+      line-height: 1.4;
+      margin-bottom: 75px;
+    }
+
+    .seo-section__bold-paragraph {
+      font-family: Montserrat;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .checkup-section__wrapper {
+      background-image: url(assets/checkup/BG.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 600px;
+      padding: 0 10px;
+      margin-top: -73px;
+    }
+
+    .checkup-section__header-input {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      min-height: 600px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .checkup-section__header {
+      font-size: 30px;
+      color: #fff;
+    }
+
+    .checkup-section__input {
+      max-width: 770px;
+      width: 100%;
+      padding: 10px;
+      border-radius: 24px;
+      border: 0;
     }
   </style>
   <body>
@@ -175,7 +386,122 @@
           </div>
         </div>
       </div>
-      <div class="scientist-section"></div>
+      <div class="scientist-section">
+        <div class="scientist-section__wrapper">
+          <h1 class="scientist-section__header">
+            A RESEARCH & DEVELOPMENT TEAM DEDICATED TO THE DEMOCRATIZATION OF
+            TACTICS THAT REALLY WORK
+          </h1>
+          <div class="scientist-section__table-text">
+            <div class="scientist-section__table-wrapper">
+              <div class="container">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="scientist-section__headers">NEW SEO TESTS</th>
+                      <th class="scientist-section__headers">
+                        RECENT TEST UPDATES
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="scientist-section__paragraphs">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Suscipit minus inventore aliquid, sunt, quae
+                        necessitatibus repellat deserunt laborum nostrum
+                        architecto assumenda exercitationem eum accusamus?
+                        Libero voluptatibus quo harum minima praesentium. Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit. At
+                        similique maiores optio omnis nam tenetur quasi,
+                        mollitia voluptatum deserunt esse error ipsum ipsam
+                        laboriosam quae incidunt beatae, asperiores
+                        necessitatibus. Minima.
+                      </td>
+                      <td class="scientist-section__paragraphs">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Suscipit minus inventore aliquid, sunt, quae
+                        necessitatibus repellat deserunt laborum nostrum
+                        architecto assumenda exercitationem eum accusamus?
+                        Libero voluptatibus quo harum minima praesentium. Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit. At
+                        similique maiores optio omnis nam tenetur quasi,
+                        mollitia voluptatum deserunt esse error ipsum ipsam
+                        laboriosam quae incidunt beatae, asperiores
+                        necessitatibus. Minima.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="scientist-section__images-wrapper">
+            <div>
+              <img
+                class="scientist-section__image"
+                src="assets/scientist/Scientist.png"
+              />
+            </div>
+            <div style="position: relative">
+              <img
+                class="scientist-section__blackboard"
+                src="/assets/scientist/Blackboard.png"
+              />
+              <div class="scientist-section__blackboard-text">
+                <h1 class="scientist-section__blackboard-header">
+                  SUBSCRIBE US
+                </h1>
+                <h2 class="scientist-section__blackboard-second-header">
+                  TO UNLOCK THIS CONTENT
+                </h2>
+                <input
+                  placeholder="your email"
+                  class="scientist-section__blackboard-input"
+                  type="email"
+                />
+                <button class="scientist-section__blackboard-button">
+                  Subscribe and Unlock
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="seo-section__wrapper">
+        <div class="seo-section__image-paragraph">
+          <div>
+            <img style="max-width: 400px" src="assets/SEO/Photo.png" />
+          </div>
+          <div class="seo-section__paragraphs-wrapper">
+            <p class="seo-section__paragraph">
+              SEO is a unique industry as the success and failure of campaigns
+              are decided by "black boxed" algorithms that "score" our documents
+              using hundreds of factors and then determine where that piece of
+              content will rank in the SERPs. This opaqueness has led to an
+              entire industry sprouting up that revolved around SEO information.
+              SEO tactile debates were won and lost in forums and Facebook
+              groups, blog comment sections were and still are rife with
+              disagreement, and various schools of thought on SEO philosophy
+              were born. White hat. Black hat. Grey Hat. Blue Hat - shoutout to
+              Eli!
+            </p>
+            <p class="seo-section__bold-paragraph">
+              THE SEO MAD SCIENTISTS WORK FEVERISHLY AND SHARE GRATUITOUSLY;
+              WITH THE TEAM RIGOROUSLY TESTING DIFFERENT SEO THEORIES AND
+              PRODUCING REPORTS FOR THE WORLD TO CONSUME.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="checkup-section__wrapper">
+        <div class="checkup-section__header-input">
+          <h1 class="checkup-section__header">
+            FIND THE SEO TESTS YOU NEED TO SUCCEED
+          </h1>
+          <input class="checkup-section__input" type="email" />
+        </div>
+      </div>
     </section>
   </body>
 </html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .hero-section {
+      background-image: url(assets/header/City-BG.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 600px;
+      padding: 0 10px;
+    }
+
+    .hero-section__wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      min-height: 600px;
+      padding-top: 80px;
+      display: flex;
+      width: 100%;
+      padding-bottom: 50px;
+    }
+    .hero-image__text-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      /* justify-content: space-between; */
+      align-items: center;
+    }
+
+    .hero-section__image-box {
+      background-image: url(assets/header/Smokes.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      padding: 0 10px;
+      width: 100%;
+      min-height: 340px;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .hero-section__image {
+      max-height: 215px;
+      margin-top: -100px;
+    }
+
+    .hero-section__header {
+      font-size: 40px;
+      font-family: Montserrat;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      transform: rotate(-3deg);
+      max-width: 350px;
+      margin: 0 auto;
+    }
+
+    .hero-section__video-text-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+    }
+
+    .hero-section__check-text-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .hero-section__check-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .hero-section__video-text {
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .hero-section__button {
+      border: none;
+      text-decoration: none;
+      background-color: transparent;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .scientist-section {
+      background-image: url(assets/scientist/Blue-bg.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 600px;
+      padding: 0 10px;
+    }
+  </style>
+  <body>
+    <section>
+      <div class="hero-section">
+        <div class="hero-section__wrapper">
+          <div class="hero-image__text-wrapper">
+            <div class="hero-section__image-box">
+              <img
+                class="hero-section__image"
+                src="assets/header/Logo-SEO-Mad-Scientist.png"
+              />
+              <h1 class="hero-section__header">
+                GET YOUR TEST & SIGN UP FOR NEW TEST
+              </h1>
+            </div>
+            <div class="hero-section__check-text-wrapper">
+              <div class="hero-section__check-text">
+                <img src="assets/header/Check-icon.png" />
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+              <div class="hero-section__check-text">
+                <img src="assets/header/Check-icon.png" />
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+              <div class="hero-section__check-text">
+                <img src="assets/header/Check-icon.png" />
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+            </div>
+          </div>
+          <div class="hero-section__video-text-wrapper">
+            <div>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/SSHsy_TyncU?si=CNEhtGn7GdrWOlEy"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div style="text-align: center">
+              <p class="hero-section__video-text">
+                We are a Collective of Data-Obsessed SEO Practitioners, Pulling
+                Back the Curtain on Single and Multivariate Test Results Meant
+                to Inform Your SEO Strategy
+              </p>
+              <button class="hero-section__button">
+                <img
+                  style="max-width: 450px"
+                  src="assets/header/Get-SEO-Updates-Button.png"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scientist-section"></div>
+    </section>
+  </body>
+</html>

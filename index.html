@@ -41,7 +41,7 @@
     .hero-image__text-wrapper {
       display: flex;
       flex-direction: column;
-      width: 100%;
+      width: 50%;
       align-items: center;
     }
 
@@ -79,6 +79,10 @@
       width: 50%;
     }
 
+    .hero-section__iframe-wrapper {
+      width: 100%;
+    }
+
     .hero-section__check-text-wrapper {
       display: flex;
       flex-direction: column;
@@ -99,6 +103,7 @@
       font-weight: 600;
       text-align: center;
       margin-top: 40px;
+      padding: 0 40px;
     }
 
     .hero-section__button {
@@ -107,6 +112,10 @@
       background-color: transparent;
       cursor: pointer;
       margin-top: 10px;
+    }
+
+    .hero-section__image-button {
+      max-width: 450px;
     }
 
     .scientist-section {
@@ -126,7 +135,7 @@
     }
 
     .scientist-section__header {
-      font-size: 34px;
+      font-size: 30px;
       color: #fff;
       text-align: center;
       font-family: Montserrat;
@@ -149,7 +158,7 @@
       font-weight: 500;
       line-height: 1.4;
       font-family: Montserrat;
-      margin-top: 70px;
+      /* margin-top: 70px; */
       background-color: #fff;
       padding: 40px 80px;
       position: relative;
@@ -168,6 +177,14 @@
         rgba(239, 239, 239, 0.75) 50%,
         #efefef 100%
       );
+    }
+
+    .mobile-version {
+      display: none;
+    }
+
+    .desktop-version {
+      display: block;
     }
 
     .container {
@@ -202,6 +219,10 @@
       display: flex;
       flex-direction: row;
       padding-bottom: 100px;
+    }
+
+    .scientist-section__image-wrapper {
+      text-align: center;
     }
 
     .scientist-section__image {
@@ -274,6 +295,7 @@
       margin: 0 auto;
       max-width: 1200px;
       display: flex;
+      flex-direction: row;
       padding-top: 85px;
       padding-bottom: 50px;
     }
@@ -324,10 +346,28 @@
       color: #fff;
     }
 
+    .checkup-section__input-group {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .checkup-section__button {
+      padding: 10px;
+      min-width: 100px;
+      margin: 5px 0 5px 0;
+      background-color: #ff0000;
+      border-radius: 24px;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      margin-left: -105px;
+    }
+
     .checkup-section__input {
       max-width: 770px;
       width: 100%;
-      padding: 10px;
+      padding: 15px;
       border-radius: 24px;
       border: 0;
     }
@@ -391,8 +431,179 @@
         flex-direction: column;
       }
 
+      .hero-section__header {
+        font-size: 25px;
+      }
+
+      .hero-section__image-box {
+        width: 60%;
+      }
+
+      .hero-section__video-text-wrapper,
+      .hero-image__text-wrapper {
+        width: 100%;
+        gap: 25px;
+      }
+
+      .hero-section__iframe-wrapper {
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 50px;
+      }
+
+      .hero-section__video-text {
+        margin-top: 0;
+      }
+
+      .hero-section__image-button {
+        max-width: 350px;
+      }
+
+      .scientist-section {
+        margin-top: -90px;
+      }
+
+      .scientist-section__wrapper {
+        padding-top: 150px;
+      }
+
+      .scientist-section__header {
+        font-size: 25px;
+      }
+
       .scientist-section__images-wrapper {
         flex-direction: column;
+      }
+
+      .scientist-section__image {
+        margin-left: 0;
+      }
+
+      .scientist-section__blackboard {
+        max-height: 500px;
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+        object-fit: contain;
+      }
+
+      .scientist-section__blackboard-text {
+        top: 33%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .scientist-section__blackboard-header {
+        font-size: 25px;
+      }
+
+      .scientist-section__blackboard-input,
+      .scientist-section__blackboard-button {
+        padding: 10px;
+      }
+    }
+
+    @media (max-width: 762px) {
+      .hero-section__image-box {
+        width: 100%;
+      }
+
+      .hero-section__iframe-wrapper {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 50px;
+      }
+
+      .seo-section__image-paragraph {
+        flex-direction: column;
+        align-items: center;
+      }
+      .scientist-section__image {
+        max-width: 300px;
+      }
+
+      .scientist-section__blackboard {
+        max-height: 350px;
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+        object-fit: contain;
+        margin-top: -116px;
+      }
+
+      .scientist-section__blackboard-text {
+        top: 33%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .scientist-section__blackboard-header {
+        font-size: 18px;
+      }
+
+      .scientist-section__blackboard-second-header {
+        font-size: 16px;
+      }
+
+      .checkup-section__header {
+        text-align: center;
+        font-size: 25px;
+        margin-bottom: 10px;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .scientist-section__paragraphs {
+        margin-top: 0;
+      }
+
+      th {
+        margin-top: 25px;
+      }
+      .scientist-section__headers {
+        font-size: 20px;
+      }
+
+      .desktop-version {
+        display: none;
+      }
+
+      .mobile-version {
+        display: block;
+      }
+      th,
+      td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      th {
+        background-color: red;
+      }
+
+      .scientist-section__blackboard-input,
+      .scientist-section__blackboard-button {
+        padding: 5px;
+      }
+
+      .scientist-section__blackboard-button {
+        margin: 5px 0 0 0;
+      }
+
+      .footer-section__inner-wrapper {
+        margin-top: 60px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .scientist-section__blackboard-text {
+        top: 15%;
+      }
+    }
+    @media (max-width: 400px) {
+      .scientist-section__blackboard-text {
+        top: 7%;
       }
     }
   </style>
@@ -426,9 +637,9 @@
             </div>
           </div>
           <div class="hero-section__video-text-wrapper">
-            <div>
+            <div class="hero-section__iframe-wrapper">
               <iframe
-                width="120%"
+                width="100%"
                 height="315"
                 src="https://www.youtube.com/embed/SSHsy_TyncU?si=CNEhtGn7GdrWOlEy"
                 title="YouTube video player"
@@ -445,7 +656,7 @@
               </p>
               <button class="hero-section__button">
                 <img
-                  style="max-width: 450px"
+                  class="hero-section__image-button"
                   src="assets/header/Get-SEO-Updates-Button.png"
                 />
               </button>
@@ -466,14 +677,29 @@
                   <thead>
                     <tr>
                       <th class="scientist-section__headers">NEW SEO TESTS</th>
-                      <th class="scientist-section__headers">
+                      <th class="scientist-section__headers desktop-version">
                         RECENT TEST UPDATES
                       </th>
+                      <td class="scientist-section__paragraphs mobile-version">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Suscipit minus inventore aliquid, sunt, quae
+                        necessitatibus repellat deserunt laborum nostrum
+                        architecto assumenda exercitationem eum accusamus?
+                        Libero voluptatibus quo harum minima praesentium. Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit. At
+                        similique maiores optio omnis nam tenetur quasi,
+                        mollitia voluptatum deserunt esse error ipsum ipsam
+                        laboriosam quae incidunt beatae, asperiores
+                        necessitatibus. Minima.
+                      </td>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td class="scientist-section__paragraphs">
+                      <th class="scientist-section__headers mobile-version">
+                        RECENT TEST UPDATES
+                      </th>
+                      <td class="scientist-section__paragraphs desktop-version">
                         Lorem ipsum dolor sit amet consectetur, adipisicing
                         elit. Suscipit minus inventore aliquid, sunt, quae
                         necessitatibus repellat deserunt laborum nostrum
@@ -504,7 +730,7 @@
             </div>
           </div>
           <div class="scientist-section__images-wrapper">
-            <div>
+            <div class="scientist-section__image-wrapper">
               <img
                 class="scientist-section__image"
                 src="assets/scientist/Scientist.png"
@@ -538,7 +764,7 @@
       <div class="seo-section__wrapper">
         <div class="seo-section__image-paragraph">
           <div>
-            <img style="max-width: 400px" src="assets/SEO/Photo.png" />
+            <img style="max-width: 375px" src="assets/SEO/Photo.png" />
           </div>
           <div class="seo-section__paragraphs-wrapper">
             <p class="seo-section__paragraph">
@@ -566,7 +792,10 @@
           <h1 class="checkup-section__header">
             FIND THE SEO TESTS YOU NEED TO SUCCEED
           </h1>
-          <input class="checkup-section__input" type="email" />
+          <div class="checkup-section__input-group">
+            <input class="checkup-section__input" type="email" />
+            <button class="checkup-section__button">Submit</button>
+          </div>
         </div>
       </div>
       <footer class="footer-section__wrapper">

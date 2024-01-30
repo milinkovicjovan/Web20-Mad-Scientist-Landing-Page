@@ -178,40 +178,34 @@
       );
     }
 
-    .mobile-version {
-      display: none;
-    }
-
-    .desktop-version {
-      display: block;
-    }
-
-    .container {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
       margin-top: 30px;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-right: 5px;
+    .grid-item {
+      display: grid;
+      grid-template-rows: 70px;
+
+      color: #fff;
+      border-radius: 5px;
     }
 
-    th,
-    td {
-      border: 1px solid #000;
-      padding: 10px;
-      text-align: left;
+    .grid-title {
+      background-color: #ff0000;
+      border-bottom: 3px solid #000;
     }
 
-    th {
-      background-color: red;
+    .grid-text {
+      background-color: #fff;
+      color: #000;
     }
 
-    .table-gap {
-      margin-top: 5px;
+    .border-title,
+    .border-text {
+      border-left: 3px solid black;
     }
 
     .scientist-section__images-wrapper {
@@ -235,7 +229,7 @@
     .scientist-section__blackboard {
       margin-top: -160px;
       position: relative;
-      width: 131%;
+      width: 126%;
       z-index: 200;
       margin-left: -161px;
     }
@@ -243,7 +237,7 @@
     .scientist-section__blackboard-text {
       position: absolute;
       top: 10%;
-      left: 14%;
+      left: 12%;
       z-index: 300;
       text-align: center;
       display: flex;
@@ -470,6 +464,16 @@
         padding-top: 150px;
       }
 
+      .grid-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .border-title,
+      .border-text {
+        border-left: 0;
+      }
+
       .scientist-section__header {
         font-size: 25px;
       }
@@ -565,29 +569,9 @@
         padding: 40px 50px;
       }
 
-      th {
-        margin-top: 25px;
-      }
       .scientist-section__headers {
         font-size: 20px;
-      }
-
-      .desktop-version {
-        display: none;
-      }
-
-      .mobile-version {
-        display: block;
-      }
-      th,
-      td {
-        display: block;
-        width: 100%;
-        box-sizing: border-box;
-      }
-
-      th {
-        background-color: red;
+        padding: 20px 48px;
       }
 
       .scientist-section__blackboard-input,
@@ -680,60 +664,45 @@
           </h1>
           <div class="scientist-section__table-text">
             <div class="scientist-section__table-wrapper">
-              <div class="container">
-                <table>
-                  <thead>
-                    <tr>
-                      <th class="scientist-section__headers">NEW SEO TESTS</th>
-                      <th class="scientist-section__headers desktop-version">
-                        RECENT TEST UPDATES
-                      </th>
-                      <td class="scientist-section__paragraphs mobile-version">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Suscipit minus inventore aliquid, sunt, quae
-                        necessitatibus repellat deserunt laborum nostrum
-                        architecto assumenda exercitationem eum accusamus?
-                        Libero voluptatibus quo harum minima praesentium. Lorem
-                        ipsum dolor sit amet consectetur adipisicing elit. At
-                        similique maiores optio omnis nam tenetur quasi,
-                        mollitia voluptatum deserunt esse error ipsum ipsam
-                        laboriosam quae incidunt beatae, asperiores
-                        necessitatibus. Minima.
-                      </td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th class="scientist-section__headers mobile-version">
-                        RECENT TEST UPDATES
-                      </th>
-                      <td class="scientist-section__paragraphs desktop-version">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Suscipit minus inventore aliquid, sunt, quae
-                        necessitatibus repellat deserunt laborum nostrum
-                        architecto assumenda exercitationem eum accusamus?
-                        Libero voluptatibus quo harum minima praesentium. Lorem
-                        ipsum dolor sit amet consectetur adipisicing elit. At
-                        similique maiores optio omnis nam tenetur quasi,
-                        mollitia voluptatum deserunt esse error ipsum ipsam
-                        laboriosam quae incidunt beatae, asperiores
-                        necessitatibus. Minima.
-                      </td>
-                      <td class="scientist-section__paragraphs">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Suscipit minus inventore aliquid, sunt, quae
-                        necessitatibus repellat deserunt laborum nostrum
-                        architecto assumenda exercitationem eum accusamus?
-                        Libero voluptatibus quo harum minima praesentium. Lorem
-                        ipsum dolor sit amet consectetur adipisicing elit. At
-                        similique maiores optio omnis nam tenetur quasi,
-                        mollitia voluptatum deserunt esse error ipsum ipsam
-                        laboriosam quae incidunt beatae, asperiores
-                        necessitatibus. Minima.
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="grid-container">
+                <div class="grid-item">
+                  <div class="grid-title">
+                    <h2 class="scientist-section__headers">NEW SEO TESTS</h2>
+                  </div>
+                  <div class="grid-text">
+                    <p class="scientist-section__paragraphs">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Suscipit minus inventore aliquid, sunt, quae
+                      necessitatibus repellat deserunt laborum nostrum
+                      architecto assumenda exercitationem eum accusamus? Libero
+                      voluptatibus quo harum minima praesentium. Lorem ipsum
+                      dolor sit amet consectetur adipisicing elit. At similique
+                      maiores optio omnis nam tenetur quasi, mollitia voluptatum
+                      deserunt esse error ipsum ipsam laboriosam quae incidunt
+                      beatae, asperiores necessitatibus. Minima.
+                    </p>
+                  </div>
+                </div>
+                <div class="grid-item">
+                  <div class="grid-title border-title">
+                    <h2 class="scientist-section__headers">
+                      RECENT TEST UPDATES
+                    </h2>
+                  </div>
+                  <div class="grid-text border-text">
+                    <p class="scientist-section__paragraphs">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Suscipit minus inventore aliquid, sunt, quae
+                      necessitatibus repellat deserunt laborum nostrum
+                      architecto assumenda exercitationem eum accusamus? Libero
+                      voluptatibus quo harum minima praesentium. Lorem ipsum
+                      dolor sit amet consectetur adipisicing elit. At similique
+                      maiores optio omnis nam tenetur quasi, mollitia voluptatum
+                      deserunt esse error ipsum ipsam laboriosam quae incidunt
+                      beatae, asperiores necessitatibus. Minima.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
